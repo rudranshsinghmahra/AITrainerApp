@@ -66,5 +66,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSSpeechRecognitionUsageDescription</key>
+    <string>We use speech recognition to let you dictate your workout goals.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>We need access to your mic for voice-to-text workout planning.</string>
 </dict>
 </plist>

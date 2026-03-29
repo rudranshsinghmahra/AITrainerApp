@@ -15,10 +15,15 @@ class AiTrainerNotifier extends _$AiTrainerNotifier {
     return null;
   }
 
-  Future<void> generate(String userInput) async {
+  Future<void> generate(String input) async {
     try {
-      final result = await _aiGeneratorService.generateMockData();
-      state = AsyncData(result);
+      // FIX: Clear old plan immediately so the viewer never shows stale data
+      state = const AsyncValue.loading();
+
+      state = await AsyncValue.guard(() async {
+        final plan = await _aiGeneratorService.generateWithGemini(input);
+        return plan;
+      });
     } catch (error) {
       state = AsyncError(error, StackTrace.current);
     }

@@ -33,7 +33,7 @@ final class AiTrainerNotifierProvider
   AiTrainerNotifier create() => AiTrainerNotifier();
 }
 
-String _$aiTrainerNotifierHash() => r'48776ca650524b723e78618d007b1018a56c753a';
+String _$aiTrainerNotifierHash() => r'b7c8fb9d74190ca84f828ada09ceea923d7065ca';
 
 abstract class _$AiTrainerNotifier extends $AsyncNotifier<TrainingPlan?> {
   FutureOr<TrainingPlan?> build();
