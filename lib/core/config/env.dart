@@ -6,4 +6,16 @@ part 'env.g.dart';
 abstract class Env {
   @EnviedField(varName: 'GEMINI_API_KEY')
   static const String geminiApiKey = _Env.geminiApiKey;
+
+  @EnviedField(varName: 'OPENAI_API_KEY')
+  static const String openAiApiKey = _Env.openAiApiKey;
+
+  @EnviedField(varName: 'OPENAI_BASE_URL')
+  static const String openAiBaseUrl = _Env.openAiBaseUrl;
+
+  @EnviedField(varName: 'DEEPSEEK_API_KEY')
+  static const String deepseekApiKey = _Env.deepseekApiKey;
+
+  @EnviedField(varName: 'DEEPSEEK_BASE_URL')
+  static const String deepseekBaseUrl = _Env.deepseekBaseUrl;
 }
